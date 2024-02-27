@@ -46,6 +46,7 @@ a
     width: 100%
     margin: 0
 .header-lower
+    width: 100%
     display: flex
     flex-direction: row
     align-items: center
@@ -53,6 +54,8 @@ a
     padding-right: 3rem
     display: grid
     grid-auto-flow: column
+    &__logo
+        width: 70%
         
     
         
@@ -97,6 +100,7 @@ a
         width: 24px
         height: 24px
     &__button
+        background: transparent
         border: 0
         cursor: pointer
     &__arrow
@@ -115,6 +119,7 @@ a
         &_modificated
             margin-right: 0.5rem
     &__button
+        background: #fff
         position: relative
         border: none
         display: flex
@@ -161,6 +166,13 @@ a
             width: 100%
         &_bigger
             font-size: 22px
+    &__link-2
+        font-size: 22px
+        position: relative
+        text-decoration: none
+        color: #1e2e36
+        font-weight: 700
+        text-transform: uppercase
     
         
         
@@ -443,23 +455,35 @@ a
 
 
 .section-third
+    margin-bottom: 104px
+    &__container
+        display: flex
+        flex-direction: column
+    &__button
+        align-self: center
+        width: 10%
     &__range-wrapper
         padding: 0 104px  
         margin-bottom: 90px 
     &__title
         margin-bottom: 52px
 .assortment-wrapper
-    &__products
-       
-        
-    
-
-.products
-    position: relative
+    width: 100%
     display: flex
-    justify-content: space-around
-    flex-wrap: wrap
-    align-content: space-around
+    justify-content: center
+    margin-bottom: 30px
+    &__products
+        grid-column-gap: 30px
+        grid-row-gap: 50px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        list-style-type: none
+        margin: 0
+        padding: 0 
+        width: 100%
+        justify-items: center
+.products
     &__info
         align-items: center
         box-sizing: border-box
@@ -477,7 +501,8 @@ a
             color: white
             background: #44c697
             transform: translateY(-20px)
-
+    &__link-wrapper
+        position: relative
     &__text-wrapper
         display: flex
         flex-direction: row-reverse
@@ -517,7 +542,6 @@ a
         text-align: center
         text-transform: uppercase
     &__img
-        height: 100%
         object-fit: contain
         width: 100%
     &__img-info
@@ -536,7 +560,281 @@ a
             background: red
             top: 15%
      
+
+// SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH
+
+.section-fourth
+    margin-bottom: 104px
+    &__container
+        position: relative
+        align-items: center
+        display: flex
+        flex-direction: column
+    &__title
+        margin-bottom: 53px
+    &__content-wrapper
+        width: 100%
+        flex-direction: row-reverse
+
+.content-wrapper
+    display: flex
+    align-items: center
+    position: relative
+    &__description
+        background: #fff
+        position: absolute
+        left: 0
+        padding: 51px 35px 50px 51px
+        width: 791px
+        &:before
+            background-color: #44c697
+            bottom: 0
+            content: ""
+            right: 0
+            position: absolute
+            top: 0
+            width: 15px  
+    &__text
+        color: #1e2e36
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        letter-spacing: -.2px
+        line-height: 1.43
+        margin-bottom: 16px
+.green
+    color: #44c697
+        
+// SECTION-FIFTH--SECTION-FIFTH--SECTION-FIFTH
+
+.section-fifth
+    margin-bottom: 109px
+    &__container
+        position: relative
+        align-items: center
+        display: flex
+        flex-direction: column
+    &__title
+        margin-bottom: 53px
+    &__content-wrapper
+        width: 100%
+        flex-direction: row
+
     
+    
+    
+.form
+    background-color: #fff
+    bottom: 119px
+    box-sizing: border-box
+    padding: 51px 51px 50px 30px
+    position: absolute
+    right: 0
+    top: 100px
+    width: 513px
+    display: flex
+    flex-direction: column
+    
+    &:before
+        background-color: #44c697
+        bottom: 0
+        content: ""
+        left: 0
+        position: absolute
+        top: 0
+        width: 15px 
+    &__title
+        align-items: center
+        color: #1e2e36
+        display: flex
+        font-size: 34px
+        font-style: normal
+        font-weight: 700
+        letter-spacing: -1.6px
+        line-height: 1.25
+        margin: 0
+        text-align: center
+        margin-bottom: 31px
+    &__label
+        margin-bottom: 15px
+    &__input
+        width: 100%
+        padding: 15px 14px 
+        border-radius: 3px
+        border: 1px solid #1e2e36
+        transition: box-shadow .4s ease
+        &:focus
+            box-shadow: 0px 0px 0px 3.5px rgba(6, 49, 70, 0.4)
+            outline: none
+    &__button
+        width: 100%
+        margin-bottom: 32px
+    &__text
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        letter-spacing: .1px
+        line-height: 1.35
+        max-width: 395px
+        a
+            margin-right: 0
+        
+            
+// FOOTER FOOTER FOOTER FOOTER FOOTER  
+
+.footer
+    &__container
+        display: flex
+        flex-direction: row
+        height: 100%
+        
+    &__img
+        object-fit: cover
+        width: 100%
+        max-width: 57vw
+        
+.footer-wrapper
+        width: 100%
+        background: #1e2e36
+        display: flex
+        flex-direction: column
+        padding: 50px 56px 15px 51px
+        &__navigation
+            padding-left: 20px
+            padding-top: 51px
+            display: flex
+            flex-direction: row
+            margin-bottom: 100px
+        &__developers-list
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            color: #fff
+            width: 100%
+        &__developers-item
+            align-items: center
+            display: flex
+            font-size: 13px
+            font-style: normal
+            font-weight: 400
+            letter-spacing: -.3px
+            line-height: 1.2
+            transform: translateY(2px)
+        &__developers-item-bold
+            font-family: Cuprum, sans-serif
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            letter-spacing: 0
+            line-height: 1.142
+            text-transform: uppercase
+            transform: translateY(-1px)
+.navigation-list
+    margin-right: 74px
+
+    &__item
+        margin-bottom: 18px
+        position: relative
+        
+    &__link
+        color: #fff
+        position: relative
+        text-decoration: none
+        font-weight: 700
+        text-transform: uppercase
+        font-size: 16px
+        white-space: nowrap
+        &:after
+            display: block
+            position: absolute
+            left: 0
+            top: 20px
+            width: 0
+            height: 3px
+            background: #44c697 
+            content: ""
+            transition: width .4s ease-in-out
+        &:hover:after
+            width: 100%    
+        &:focus:after
+            width: 100%
+        &:before
+            background: #44c697 
+            content: ""
+            position: absolute
+            width: 14px
+            top: 10px
+            left: -20px
+            height: 2px
+.navigation-contacts
+    &__img
+        width: 24px
+        height: 24px
+        margin-right: 6px
+    &__item
+        display: flex
+        flex-direction: row
+        margin-bottom: 16px
+    &__item-media
+        display: flex
+        flex-direction: column
+    &__item-phone
+        margin-bottom: 25px
+        display: flex
+        flex-direction: row
+    &__text
+        color: #fff
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        letter-spacing: .3px
+        line-height: 1.25
+        white-space: nowrap
+    &__text-media
+        margin-bottom: 15px
+        color: #fff
+    &__text-uppercase
+        color: #fff
+        font-family: Montserrat, sans-serif
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        letter-spacing: .3px
+        line-height: 1.25
+        text-transform: uppercase
+    &__phone
+        display: flex
+        flex-direction: column
+    &__img-list
+        display: flex
+        flex-direction: row
+        gap: 20px
+    &__img-item
+        width: 22px
+        height: 22px    
+.green
+    color: #44c697 
+    line-height: 1.75
+
+
+
+
+
+            
+
+
+        
+
+
+
+
+        
+    
+        
+
+    
+
+
 
 
     
