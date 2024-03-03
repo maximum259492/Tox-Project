@@ -202,7 +202,8 @@ a
         &:after
             display: block
             position: absolute
-            bottom: 0
+            bottom: -2px
+        
             width: 0
             height: 2px
             background: #44c697
@@ -426,6 +427,7 @@ a
     &:hover .card__info
         transform: translateY(-60px)
         overflow: visible
+        
     &__info
         align-items: flex-start
         bottom: 19px
@@ -433,7 +435,7 @@ a
         display: flex
         flex-direction: column
         gap: 10px
-        transition: .4s ease-in-out
+        transition: .4s ease-in-out 
         position: absolute
         width: calc(100% - 60px)
         z-index: 2
@@ -545,33 +547,20 @@ a
         margin-bottom: 30px
         width: 100%
         white-space: nowrap
+        transition: .3s ease-in-out
         &:hover 
             color: white
             background: #44c697
             transform: translateY(-20px)
+        &:hover .products__price
+            color: white
     &__link-wrapper
         position: relative
     &__text-wrapper
         display: flex
         flex-direction: row-reverse
         align-items: flex-end
-        span
-            &:nth-of-type(1)
-                color: #bcbdbb
-                font-size: 16px
-                letter-spacing: .4px
-                position: relative
-                text-decoration-line: line-through
-                text-transform: uppercase
-                margin-left: 8px
-            &:nth-of-type(2)
-                font-size: 22px
-                font-style: normal
-                font-weight: 700
-                line-height: 1.25
-                text-align: center
-                text-transform: uppercase
-                color: red          
+                
     &__title
         font-size: 22px
         font-style: normal
@@ -589,6 +578,25 @@ a
         line-height: 1.25
         text-align: center
         text-transform: uppercase
+        &_crossed
+            color: #bcbdbb
+            font-size: 16px
+            letter-spacing: .4px
+            position: relative
+            text-decoration-line: line-through
+            text-transform: uppercase
+            margin-left: 8px
+            transition: color .2s ease-in-out
+        &_red 
+            font-size: 22px
+            font-style: normal
+            font-weight: 700
+            line-height: 1.25
+            text-align: center
+            text-transform: uppercase
+            color: red 
+            transition: color .2s ease-in-out
+
     &__img
         object-fit: contain
         width: 100%
