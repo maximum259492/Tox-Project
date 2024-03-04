@@ -12,9 +12,9 @@ a
     color: #1e2e36
 
 .сontainer
-    width: 1880px
+    max-width: 1880px
     margin: 0 auto
-    min-width: 50%
+    width: 50%
 
 // HEADER--HEADER--HEADER 
 .header
@@ -126,8 +126,11 @@ a
         justify-items: center
         align-items: center
         cursor: pointer
-
-            
+        path
+            transition: fill .3s ease-out
+            fill: #1e2e36
+        &:hover path
+            fill: #44c697
         &:after
             display: block
             position: absolute
@@ -424,10 +427,13 @@ a
     position: relative
     width: 100%
     cursor: pointer
+    display: flex
+    align-items: center
     &:hover .card__info
         transform: translateY(-60px)
         overflow: visible
-        
+    &:hover .card__text
+        visibility: visible
     &__info
         align-items: flex-start
         bottom: 19px
@@ -439,7 +445,6 @@ a
         position: absolute
         width: calc(100% - 60px)
         z-index: 2
-        overflow: hidden
         
     &__title
         position: relative
@@ -470,10 +475,9 @@ a
         transform: translateY(12px)
         width: 100%
         z-index: -1
-        transition: all .4s ease-in-out
+        transition: .4s ease-in
+        visibility: hidden
 
-        
-        
     &__img-1
         object-fit: contain
         width: 100%
@@ -547,20 +551,20 @@ a
         margin-bottom: 30px
         width: 100%
         white-space: nowrap
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out
         &:hover 
-            color: white
             background: #44c697
             transform: translateY(-20px)
         &:hover .products__price
+            color: white
+        &:hover .products__title
             color: white
     &__link-wrapper
         position: relative
     &__text-wrapper
         display: flex
         flex-direction: row-reverse
-        align-items: flex-end
-                
+        align-items: flex-end   
     &__title
         font-size: 22px
         font-style: normal
@@ -571,6 +575,8 @@ a
         text-align: center
         text-decoration: none
         text-transform: uppercase
+        color: #1e2e36
+        transition: color .3s linear
     &__price
         font-size: 22px
         font-style: normal
@@ -578,6 +584,7 @@ a
         line-height: 1.25
         text-align: center
         text-transform: uppercase
+        transition: color .3s linear
         &_crossed
             color: #bcbdbb
             font-size: 16px
@@ -586,7 +593,7 @@ a
             text-decoration-line: line-through
             text-transform: uppercase
             margin-left: 8px
-            transition: color .2s ease-in-out
+            transition: color .3s linear
         &_red 
             font-size: 22px
             font-style: normal
@@ -595,14 +602,14 @@ a
             text-align: center
             text-transform: uppercase
             color: red 
-            transition: color .2s ease-in-out
+            transition: color .3s linear
 
     &__img
         object-fit: contain
         width: 100%
     &__img-info
         position: absolute
-        top: 5%
+        top: 2vh
         background:#1e2e36
         color: #fff
         padding: 5px 15px
@@ -612,9 +619,9 @@ a
         line-height: 1.25
         text-align: center
         text-transform: uppercase
-        &_special
+        &_special  
             background: red
-            top: 15%
+            top: 6vh
      
 
 // SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH
