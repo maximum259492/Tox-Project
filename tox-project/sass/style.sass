@@ -433,6 +433,10 @@ a
         overflow: visible
     &:hover .card__text
         visibility: visible
+        
+        
+            
+            
     &__info
         align-items: flex-start
         bottom: 19px
@@ -440,7 +444,7 @@ a
         display: flex
         flex-direction: column
         gap: 10px
-        transition: .4s ease-in-out 
+        transition: .41s ease-in-out 
         position: absolute
         width: calc(100% - 60px)
         z-index: 2
@@ -476,6 +480,7 @@ a
         z-index: -1
         transition: .4s ease-in
         visibility: hidden
+        
 
     &__img-1
         object-fit: contain
@@ -530,8 +535,7 @@ a
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: repeat(2, 1fr)
-        justify-items: center
-        align-items: center
+        place-items: center
         max-width: 100%
 .products
     &__info
