@@ -12,7 +12,7 @@ a
     color: #1e2e36
 
 .сontainer
-    max-width: 1880px
+    max-width: 1884px
     margin: 0 auto
     width: 50%
 
@@ -58,7 +58,7 @@ a
     grid-auto-flow: column
     gap: 20px
     &__logo
-        max-width: 250px 
+        width: clamp(100px, 15vw, 400px)
 .text
     display: flex
     align-items: center 
@@ -205,10 +205,9 @@ a
         &:after
             display: block
             position: absolute
-            bottom: -2px
-        
+            bottom: -5px
             width: 0
-            height: 2px
+            height: 2.5px
             background: #44c697
             content: ""
             transition: width .3s ease-out
@@ -502,8 +501,7 @@ a
         flex-direction: column
         
     &__button
-        align-self: center
-        width: 10%
+        grid-column: 2 / 3
     &__range-wrapper
         width: 100%
         padding: 0 104px  
@@ -543,6 +541,7 @@ a
         flex-direction: row
         justify-content: space-between
         padding: 16px 15px 15px
+
     &__link
         display: flex
         flex-direction: column
@@ -603,13 +602,17 @@ a
             text-transform: uppercase
             color: red 
             transition: color .3s linear
-
     &__img
         object-fit: contain
         width: 100%
-    &__img-info
+    &__list
         position: absolute
-        top: 2vh
+        left: 0
+        top: 15px
+        flex-direction: column
+        display: flex
+        row-gap: 15px
+    &__img-info
         background:#1e2e36
         color: #fff
         padding: 5px 15px
@@ -621,7 +624,6 @@ a
         text-transform: uppercase
         &_special  
             background: red
-            top: 6vh
      
 
 // SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH--SECTION-FOURTH
