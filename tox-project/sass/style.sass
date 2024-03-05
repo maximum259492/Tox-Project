@@ -14,7 +14,9 @@ a
 .сontainer
     max-width: 1884px
     margin: 0 auto
-    width: 50%
+    overflow: hidden
+    
+    
 
 // HEADER--HEADER--HEADER 
 .header
@@ -58,11 +60,11 @@ a
     grid-auto-flow: column
     gap: 20px
     &__logo
-        width: clamp(100px, 15vw, 400px)
+        width: clamp(228px, 19.11vw, 360px)
 .text
     display: flex
     align-items: center 
-    font-size: 16px
+    font-size: clamp(14px, 1vw, 17px)
     font-weight: 700
     color: #1e2e36
     white-space: nowrap
@@ -86,6 +88,7 @@ a
         font-weight: 700
         white-space: nowrap
         align-items: center
+        font-size: clamp(12px, 1vw, 17px)
     &__icon
         width: 24px
         height: 24px
@@ -123,8 +126,7 @@ a
         grid-template-columns: 1fr
         grid-template-rows: 100px 1fr
         row-gap: 14px
-        justify-items: center
-        align-items: center
+        place-items: center
         cursor: pointer
         path
             transition: fill .3s ease-out
@@ -156,7 +158,7 @@ a
         color: #1e2e36
         font-weight: 700
         text-transform: uppercase
-        font-size: 16px
+        font-size: clamp(11px, 1vw, 17px)
         &:after
             display: block
             position: absolute
@@ -193,6 +195,7 @@ a
     justify-content: flex-end
     width: 100%
     align-items: center
+    gap: 20px
     &__link
         position: relative
         display: flex
@@ -201,8 +204,7 @@ a
         color: #1e2e36
         font-weight: 700
         text-transform: uppercase
-        font-size: 16px
-        margin-right: 30px  
+        font-size: clamp(12px, 1vw, 17px)  
         &:after
             display: block
             position: absolute
@@ -217,8 +219,7 @@ a
         &:focus:after
             width: 100%
     &__cart
-        width: 30px
-        height: 30px
+        height: clamp(20px, 1vw, 30px)
         margin-right: 5px
 .button
     padding: 0.9em 3em
@@ -506,7 +507,6 @@ a
         align-items: center
         display: flex
         flex-direction: column
-        
     &__button
         grid-column: 2 / 3
     &__range-wrapper
@@ -527,13 +527,13 @@ a
             z-index: -1  
 
 .assortment-wrapper
+    width: 100%
     display: flex
     justify-content: center
-    margin-bottom: 30px
     
     &__products
-        grid-column-gap: 30px
-        grid-row-gap: 50px
+        column-gap: 30px
+        row-gap: 50px
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: repeat(2, 1fr)
@@ -695,7 +695,8 @@ a
         align-items: center
         display: flex
         flex-direction: column
-        max-width: 100%
+       
+        overflow: hidden
     &__title
         margin-bottom: 53px
         position: relative
@@ -784,18 +785,25 @@ a
 // FOOTER FOOTER FOOTER FOOTER FOOTER  
 
 .footer
+    width: 100%
+    position: relative
     &__container
         display: flex
-        flex-direction: row   
+        width: 100%
+        flex-direction: row
     &__img
         object-fit: cover
-        width: 100%
+        width: 57vw
+        height: auto
+        position: relative
+        
 .footer-wrapper
         width: 100%
         background: #1e2e36
         display: flex
         flex-direction: column
         padding: 50px 56px 10px 51px
+        justify-content: center
         
         &__navigation
             padding-left: 20px
